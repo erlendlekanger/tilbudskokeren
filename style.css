@@ -1,0 +1,168 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("food.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px; /* Add padding to the top */
+    overflow: auto; 
+    min-height: 100vh; /* Add min-height */
+}
+
+  
+h1 {
+    color: #333;
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+  
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+p2 {
+    margin-top: 20px;
+    font-weight: 550;
+    font-size: 24px;
+    color: black;
+}
+  
+.box {
+    display: flex; /* Add display: flex */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 350px;
+    height: 150px;
+    margin: 10px;
+    border: 2px solid #333;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.box-text {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(37, 37, 37);
+}
+
+.box:hover {
+    border: 4px solid #248ebd;
+}
+
+.box.selected {
+    border-width: 4px;
+    border-style: solid;
+    border-color: #29ABE2;
+}
+
+.button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 24px;
+    background-color: #29ABE2;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box img {
+    object-fit: contain;
+    display: inline-block;
+    max-width: 100%; /* Add max-width to prevent images from overflowing */
+    max-height: 100%; /* Add max-height to prevent images from overflowing */
+}
+
+.box-image-1 {
+    width: 150px;
+    height: 100px;
+}
+
+.box-image-2 {
+    width: 120px;
+    height: 80px;
+}
+
+.box-image-3 {
+    width: 140px;
+    height: 90px;
+}
+
+.box-image-4 {
+    width: 130px;
+    height: 70px;
+}
+
+.button:hover {
+    background-color: #248ebd;
+}
+
+
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.recipe h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.recipe p {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+.recipe ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.recipe li {
+    margin-bottom: 5px;
+}
+
+.recipe p:last-of-type {
+    margin-top: 20px;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    position: absolute; /* Add position: absolute; */
+    top: 50px; /* Add top: 50px; */
+}

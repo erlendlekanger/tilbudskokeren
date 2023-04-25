@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<html>
+		<head>
+			<title>Tilbudskokeren</title>
+			<link rel="stylesheet" href="style.css">
+			<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+		</head>
+<body>
+	<h1>Tilbudskokeren</h1>
+	<p>Velg butikkene i nærheten av deg:</p>
+	<div id="boxes">
+		<div class="box" id="box1" onclick="selectBox(1)">
+			<img class="box-image box-image-1" src="rema2.png" alt="REMA 1000">
+		</div>
+		<div class="box" id="box2" onclick="selectBox(2)">
+			<img class="box-image box-image-2" src="extra2.png" alt="Extra">
+		</div>
+		<div class="box" id="box3" onclick="selectBox(3)">
+			<img class="box-image box-image-3" src="prixen2.png" alt="PRIX">
+		</div>
+		<div class="box" id="box4" onclick="selectBox(4)">
+			<img class="box-image box-image-4" src="bunnpris2.png" alt="Bunnpris">
+		</div>
+	</div>		
+    <button class="button" onclick="nextPage()">Next</button>
+	<script>
+		var selectedBoxes = [];
+
+		function selectBox(boxNum) {
+			var box = document.getElementById("box" + boxNum);
+			if (box.classList.contains("selected")) {
+				box.classList.remove("selected");
+				selectedBoxes.splice(selectedBoxes.indexOf(boxNum), 1);
+			} else {
+				box.classList.add("selected");
+				selectedBoxes.push(boxNum);
+			}
+		}
+
+		function nextPage() {
+			// Do something with selectedBoxes here, e.g. send to server via AJAX
+			// then navigate to the next page
+			window.location.href = "nextpage.html";
+		}
+	</script>
+</body>
+</html>
